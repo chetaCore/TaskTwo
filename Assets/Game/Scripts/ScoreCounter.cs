@@ -13,7 +13,10 @@ public class ScoreCounter : MonoBehaviour
     private void Awake()
     {
         _wall = GetComponent<ActiveWall>();
+    }
 
+    private void OnEnable()
+    {
         EventSet.objectDestroed += AddScore;
     }
 
@@ -26,5 +29,10 @@ public class ScoreCounter : MonoBehaviour
     {
         if (elemColor.Equals(_wall.type))
             _scoreText.text = (_score += 1).ToString();
+    }
+
+    private void OnDisable()
+    {
+        EventSet.objectDestroed -= AddScore;
     }
 }
