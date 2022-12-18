@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2001834095711111113, guid: f444c5ffb15c1ab48a18bfc0cfddc6e4, type: 3}
+      propertyPath: _elementColor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5166691174658564536, guid: f444c5ffb15c1ab48a18bfc0cfddc6e4, type: 3}
       propertyPath: m_Name
       value: BlueObject

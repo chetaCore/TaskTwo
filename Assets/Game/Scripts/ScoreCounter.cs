@@ -2,30 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static TypesSet;
 
 public class ScoreCounter : MonoBehaviour
 {
-    [SerializeField] private TMP_Text scoreText;
-    private ActiveWall wall;
-    private int score = 0;
-    
-
+    [SerializeField] private TMP_Text _scoreText;
+    private ActiveWall _wall;
+    private int _score = 0;
 
     private void Awake()
     {
-        wall = GetComponent<ActiveWall>();
+        _wall = GetComponent<ActiveWall>();
 
-        EventSet.objectDestroed.AddListener(AddScore);
+        EventSet.objectDestroed += AddScore;
     }
 
     private void Start()
     {
-        scoreText.text = score.ToString();
+        _scoreText.text = _score.ToString();
     }
 
-    private void AddScore(TypesSet.Type type)
+    private void AddScore(ElementColor elemColor)
     {
-        if (type.Equals(wall.type))
-            scoreText.text = (score += 1).ToString();
+        if (elemColor.Equals(_wall.type))
+            _scoreText.text = (_score += 1).ToString();
     }
 }

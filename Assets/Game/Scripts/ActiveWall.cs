@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TypesSet;
 
 public class ActiveWall : MonoBehaviour
 {
-    [SerializeField] public TypesSet.Type type;
+    [SerializeField] public ElementColor type;
 }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TypesSet : MonoBehaviour
 {
-    public enum Type
+    public enum ElementColor
     {
+        Standart,
         Blue,
         Red
 

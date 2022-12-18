@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using static TypesSet;
 
 public class EventSet : MonoBehaviour
 {
-    public static UnityEvent<TypesSet.Type> objectDestroed = new();
+    public static Action<ElementColor> objectDestroed;
 }
